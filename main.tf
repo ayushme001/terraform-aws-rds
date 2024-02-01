@@ -59,6 +59,7 @@ resource "aws_rds_cluster" "aurora_cluster" {
   skip_final_snapshot             = var.skip_final_snapshot
   vpc_security_group_ids              = [aws_security_group.rds_db.id]
   apply_immediately                   = var.apply_immediately
+  allow_major_version_upgrade         = true
 #   serverlessv2_scaling_configuration {
 #     max_capacity = var.serverlessv2_scaling_configuration_max
 #     min_capacity = var.serverlessv2_scaling_configuration_min
