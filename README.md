@@ -70,6 +70,7 @@ module "create_database" {
   db_subnet_group_id = "tothenew-subnet-group"
   deletion_protection = false
   auto_minor_version_upgrade = false
+  allow_major_version_upgrade = true
   count_aurora_instances = 1
   serverlessv2_scaling_configuration_max = 1.0
   serverlessv2_scaling_configuration_min = 0.5
