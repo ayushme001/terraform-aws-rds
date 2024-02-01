@@ -39,6 +39,7 @@ resource "aws_db_instance" "rds_db" {
   skip_final_snapshot             = var.skip_final_snapshot
   final_snapshot_identifier       = var.final_snapshot_identifier == "" ? "${var.project_name_prefix}-final-snapshot" : var.final_snapshot_identifier
   auto_minor_version_upgrade      = var.auto_minor_version_upgrade
+  allow_major_version_upgrade     = var.allow_major_version_upgrade
 
 }
 
